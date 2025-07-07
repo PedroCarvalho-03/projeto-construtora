@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de vendas de imóveis de alto padrão">
+    <title>BYD Imóveis</title>
+    <!-- Fonte Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="scripts.js"></script>
+    <style>
+        header .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BYD Imóveis</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#imoveis">Imóveis</a></li>
+                    <li><a href="#reserva">Reservar Visita</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Página Inicial -->
+        <section id="home">
+            <div class="hero">
+                <h2>Encontre o imóvel dos seus sonhos</h2>
+                <p>Imóveis exclusivos para quem busca luxo e sofisticação.</p>
+                <a href="#imoveis" class="btn">Ver Imóveis</a>
+            </div>
+        </section>
+        <!-- Página de Imóveis -->
+        <section id="imoveis" class="container">
+            <h2>Imóveis Disponíveis</h2>
+            <div class="imoveis-list">
+                <div class="imovel">
+                    <img src="imagem/casao.webp" alt="Casa de Luxo">
+                    <h3>Casa de Luxo - Bairro Nobre</h3>
+                    <p>Preço: R$ 5.000.000</p>
+                </div>
+                <div class="imovel">
+                    <img src="imagem/apartamento.jpeg" alt="Apartamento Exclusivo">
+                    <h3>Apartamento Exclusivo - Vista para o Mar</h3>
+                    <p>Preço: R$ 3.800.000</p>
+                </div>
+                <div class="imovel">
+                    <img src="imagem/chacara.webp" alt="Chácara Moderna">
+                    <h3>Chácara Moderna - Espaço e Conforto</h3>
+                    <p>Preço: R$ 4.200.000</p>
+                </div>
+            </div>
+        </section>
+        <!-- Página de Reserva -->
+        <section id="reserva" class="container">
+            <h2>Reserve uma Visita</h2>
+            <form id="reservaForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="imovel">Escolha o Imóvel:</label>
+                <select id="imovel" name="imovel">
+                    <option value="Casa de Luxo">Casa de Luxo</option>
+                    <option value="Apartamento Exclusivo">Apartamento Exclusivo</option>
+                    <option value="Chácara Moderna">Chácara Moderna</option>
+                </select>
+                <label for="data">Data da Visita:</label>
+                <input type="date" id="data" name="data" required>
+                <button type="submit">Reservar</button>
+            </form>
+            <p id="mensagem"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BYD Imóveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
